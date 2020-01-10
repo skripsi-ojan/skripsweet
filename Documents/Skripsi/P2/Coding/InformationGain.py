@@ -42,7 +42,7 @@ class InformationGain:
     def hapusIG(self, ig_terurut, median):
         term_latih = []
         for i in range(len(ig_terurut)):
-            if (float(ig_terurut[i][0]) < median):
+            if (float(ig_terurut[i][0]) >= median):
                 term_latih.append(ig_terurut[i][1])
                 
         return term_latih
