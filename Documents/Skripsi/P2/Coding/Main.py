@@ -12,8 +12,8 @@ from KNN import KNN
 from Pengujian import Pengujian
 
 class MainProgram():
-    FILENAME_LATIH  = 'Dataset/Data Latih.xlsx'
-    FILENAME_UJI    = 'Dataset/Data Uji.xlsx'
+    FILENAME_LATIH  = 'Datasett/Data Latihh.xlsx'
+    FILENAME_UJI    = 'Datasett/Data Ujii.xlsx'
     
     def main(self):
         data_latih  = pd.read_excel(self.FILENAME_LATIH)
@@ -65,7 +65,7 @@ class MainProgram():
         x_train         = tf_idf[:, :len(data_latih)]
         y_train         = data_latih['Class']
         x_test          = tf_idf[:, len(data_latih):len(data_latih)+len(data_uji)]
-        k               = 3
+        k               = 29
         
         kelas           = knn.main(k, x_train, y_train, x_test)
         print("\nK :", k)
